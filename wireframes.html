@@ -23,8 +23,34 @@
     <section class="bookmark-info"></section>
     <p>Title</p>
 
-    <!---->
+    <!--Adding View-->
+    <section class="container adding-bookmark">
+        <h1>Create Bookmark</h1>
+        <form id="js-creating-bookmark-form">
+            <label for="bookmark-title-entry">Add title</label>
+            <input type="text" name="adding-bookmark-entry" class="js-bookmark-entry" placeholder="e.g., bookmark title">
+            <label for="bookmark-url-entry">Add url</label>
+            <input type="text" name="adding-bookmark-entry" class="js-bookmark-entry" placeholder="e.g., www.something.com">
+            <form action="#">
+                <p>Bookmark Rating</p>
+                <input type="radio" id="5" name="rating" value="5">
+                <label for="rating">5</label><br>
+                <input type="radio" id="4" name="rating" value="4">
+                <label for="rating">4</label><br>
+                <input type="radio" id="3" name="rating" value="3">
+                <label for="rating">3</label>
+                <input type="radio" id="2" name="rating" value="2">
+                <label for="rating">2</label>
+                <input type="radio" id="1" name="rating" value="1">
+                <label for="rating">1</label>
+            <button class="submit">
+            <span>Submit</span>
+            </button>
+        </form>
+    </section>
 
-</body>
-
+    <!--Deleting View-->
+    <section class="--Deleting bookmark">
+        <h1>Delete Bookmark</h1> 
+    </section>
 </html>
