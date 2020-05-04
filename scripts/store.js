@@ -8,3 +8,5 @@ const store = {
     error: null,
     filter: 0
   };
+
+  
