@@ -1,0 +1,10 @@
+const bookmarks = [];
+//let showError
+//let errorMessage 
+
+const store = {
+    bookmarks: [],
+    adding: true,
+    error: null,
+    filter: 0
+  };
