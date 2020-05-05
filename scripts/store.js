@@ -1,13 +1,8 @@
-//const bookmarks = [];
-//let showError
-//let errorMessage 
+const bookmarks = [];
+let showError
+let errorMessage 
 
-const store = {
-    bookmarks: [],
-    adding: false,
-    error: null,
-    filter: 0
-  };
+
 
 const findById = function (id) {
     return this.bookmarks.find(currentBookmark => currentBookmark.id ===id);
@@ -27,12 +22,18 @@ const findAndDelete = function (id) {
     this.bookmarks = this.filter(currentBookmark => currentBookmark.id !==id);
 };
 
+const setError = function (error) {
+    this.error = error;
+};
+
 export default {
     bookmarks,
+    error,
     showError,
     findById,
     addBookmark,
     findAndUpdate,
     findAndDelete,
+    setError
 };
 

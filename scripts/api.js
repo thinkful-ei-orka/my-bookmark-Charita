@@ -1,10 +1,11 @@
 const BASE_URL =  'https://thinkful-list-api.herokuapp.com/Charita';
 
-function getBookmarks() {
+
+const getBookmarks = function() {
     return fetch(`${BASE_URL}/bookmarks`);
 }
 
-function createBookmark(title) {
+const createBookmark = function(id,title,url,desc,rating) {
     let newBookmark = {
         'title': title
     }
@@ -17,7 +18,7 @@ function createBookmark(title) {
     });
 };
 
-function updateBookmark(id, updateData) {
+const updateBookmark = function(id, updateData) {
     let newUrl = `${BASE_URL}/bookmarks/${id}`;
     let newBookmark = JSON.stringify(updateData);
 
@@ -28,7 +29,7 @@ function updateBookmark(id, updateData) {
     });
 }
 
-function deleteBookmark(id) {
+const deleteBookmark = function(id) {
     let newURL = `${BASE_URL}/bookmarks/${id}`;
 
     return fetch(newUrl,{
