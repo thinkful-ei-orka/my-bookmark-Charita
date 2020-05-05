@@ -19,5 +19,20 @@ const addBookmark= function (bookmark) {
 
 const findAndUpdate = function (id, newData) {
     let newBookmark = this.findById(id);
+
+    Object.assign(newBookmark, newData);
+};
+
+const findAndDelete = function (id) {
+    this.bookmarks = this.filter(currentBookmark => currentBookmark.id !==id);
+};
+
+export default {
+    bookmarks,
+    showError,
+    findById,
+    addBookmark,
+    findAndUpdate,
+    findAndDelete,
 };
 
