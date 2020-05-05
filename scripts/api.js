@@ -1,10 +1,3 @@
-export default {
-    getBookmarks,
-    createBookmark,
-    updateBookmark,
-    deleteBookmark,
-};
-
 const BASE_URL =  'https://thinkful-list-api.herokuapp.com/Charita';
 
 function getBookmarks() {
@@ -44,6 +37,12 @@ function deleteBookmark(id) {
     });
 }
 
+export default {
+    getBookmarks,
+    createBookmark,
+    updateBookmark,
+    deleteBookmark,
+};
 
 
     
