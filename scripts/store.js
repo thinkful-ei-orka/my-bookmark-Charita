@@ -1,7 +1,7 @@
 const bookmarks = [];
-let showError
-let errorMessage 
-
+let adding = false;
+let error = null;
+let filter = 0;
 
 
 const findById = function (id) {
@@ -19,7 +19,14 @@ const findAndUpdate = function (id, newData) {
 };
 
 const findAndDelete = function (id) {
-    this.bookmarks = this.filter(currentBookmark => currentBookmark.id !==id);
+    this.bookmarks = this.bookmarks.filter(currentBookmark => currentBookmark.id !==id);
+};
+
+const filterList = function (rating) {
+    this.filter = rating;
+    let filterBookmarks = this.bookmarks.filter(bookmark =>
+        bookmark.rating >= this.filter);
+        return filterBookmarks;
 };
 
 const setError = function (error) {
@@ -28,6 +35,7 @@ const setError = function (error) {
 
 export default {
     bookmarks,
+    adding,
     error,
     showError,
     findById,

@@ -9,8 +9,8 @@ import api from './api';
 
 const main = function () {
   api.getBookmarks()
-    .then((bookmarks) => {
-      bookmarks.forEach((bookmark) => store.addBookmark(bookmark));
+    .then(bookmarks => {
+      bookmarks.forEach(bookmark => store.addBookmark(bookmark));
       bookmarkList.render();
     });
   bookmarkList.bindEventListeners();
