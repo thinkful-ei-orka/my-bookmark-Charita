@@ -1,11 +1,6 @@
-import $ from 'jquery';
-
-import 'normalize.css';
-import './index.css';
-
-import bookmarkList from './bookmark-list';
-import store from './store';
-import api from './api';
+import bookmarkList from './bookmark-list.js';
+import store from './store.js';
+import api from './api.js';
 
 const main = function () {
   api.getBookmarks()
